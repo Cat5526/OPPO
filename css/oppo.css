@@ -1,0 +1,262 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    position: relative;
+}
+a,li{
+    text-decoration: none;
+    list-style: none;
+}
+/* 头部区域  包含顶部区域和导航区域 */
+.header{
+    width: 100%;
+    height: 120px;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    z-index: 5999;
+}
+/* 顶部区域 */
+.header-top{
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    line-height: 40px;
+    position: relative;
+}
+.header-topl{
+    margin-left: 120px;
+}
+.header-topl a{
+    font-size: 13px;
+    color: #fff;
+    padding-left: 20px;
+}
+.header-topr{
+    position: absolute;
+    right: 160px;
+    top: 0;
+    font-size: 13px;
+}
+.header-topr a{
+    color: #fff;
+    padding-left: 10px;
+}
+/* 导航区域 */
+.header-bot{
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    background-color: #fff;
+    border-bottom: 1px solid rgb(235, 233, 233);
+}
+.header-botl{
+    width: 200px;
+    margin-left: 120px;
+    float: left;
+}
+.header-bot ul{
+    width: 600px;
+    margin-left: 60px;
+    float: left;
+}
+.header-bot ul li{
+    display: inline-block;
+    width: 150px;
+    height: 80px;
+    line-height: 80px;
+}
+.header-bot ul li a{
+    text-align: center;
+    display: inline-block;
+    width: 150px;
+    height: 80px;
+    line-height: 80px;
+    color:gray;
+}
+.header-bot ul li a:hover{
+    color: black;
+}
+.nav-three{
+    float: left;
+    position: relative;
+    margin-left: 50px;
+}
+.nav-three input{
+    outline: 0;/* 点击文本框时四边没有实线 */
+    width: 200px;
+    height: 30px;
+    border:0px solid #fff;
+    border-radius: 20px;
+    box-shadow:0 0 5px 2px rgba(0,0,0,0.1);
+    padding: 0 30px 0 15px;
+    color: gray;
+}
+.icon{
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    background-image: url(../images/search.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 35px;
+    left: 210px;
+    z-index: 2;
+}
+
+/* 轮播图区域 */
+.banner{
+    width: 100%;
+    /*子绝父相*/
+    position: relative;
+    /*超出部分全部隐藏，解决横向滚动条*/
+    overflow: hidden;
+    margin-top: 150px;
+    z-index: 2;
+    background-color: #fff;
+}
+.banner ul{
+    position: absolute;
+}
+.banner ul li{
+    /*这个100%是相对于父盒子的（会把父盒子的宽度继承过来,如父盒子300%,这这里的100%就会相当于300%）*/
+    width: 100%;
+    height: 560px;
+    float: left;
+    background:  no-repeat center center;
+}
+.banner ol{
+    height: 20px;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    left:50%;
+    bottom: 30px;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+.banner ol li{
+    width: 10px;
+    height: 10px;
+    float: left;
+    margin: 5px 5px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.banner ol .current{
+    background: rgba(255,255,255,1);
+}
+.banner i{
+    width: 50px;
+    height: 120px;
+    position: absolute;
+    top: 50%;
+    margin-top: -60px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: none;
+}
+.banner .left{
+    left: 170px;
+    background: url('../images/left_right.png') no-repeat 0 0px;
+}
+.banner .right{
+    right: 170px;
+    background: url('../images/left_right.png') no-repeat 0px -120px;
+}
+.banner .left:hover , .banner .right:hover{
+    background-color: rgba(0, 0, 0, 0.31);
+}
+
+
+/* 侧边栏区域 */
+.ce{
+    position: absolute;
+    width: 80px;
+    height: 240px;
+    right: 30px;
+    top: 360px;
+    z-index: 99;
+    position: fixed;
+    background-color: #fff;
+    box-shadow:0 0 5px 2px rgba(0,0,0,0.1);
+}
+/* 下载oppo商城app */
+.z{
+    position: absolute;
+    z-index: 9999;
+    top:40px;
+    right:390px;
+    width: 150px;
+    height: 160px;
+    display: none;
+    position: fixed;
+}
+.x{
+    position: absolute;
+    z-index: 7;
+    top:440px;
+    right:110px;
+    width: 150px;
+    height: 160px;
+    display: none;
+    position: fixed;
+}
+/* 回到顶部 */
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 60px;
+    right: 29px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    background-image: url(../images/ding.png);
+    box-shadow: 0 0 10px gray;
+  }
+
+    /* 手机列表 */
+  .lie{
+    width: 1200px;
+    height: 80px;
+    margin: 30px auto;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+
+
+  /* 详情页 */
+  .find{
+    width: 1200px;
+    margin: 60px auto;
+  }
+  .find p{
+    font-size: 24px;
+    padding-bottom: 20px;
+  }
+  .al{
+    padding-left: 10px;
+  }
+  .find a img:hover{
+    transform: scale(1.03);
+    box-shadow: 0 0 10px gray;
+  }
+
+  /* 底部 */
+  .foot{
+    width: 1200px;
+    margin: 60px auto;
+  }
+
+
+
+
+    
+
+
